@@ -9,7 +9,9 @@ exports.queryAllUsers = (connexion, req, res) => {
 
 exports.queryPostUser = (connexion, req, res) => {
 
-    connexion.query("CALL postUser("+ req.name + "," + req.surname + "," + req.location + "," + req.email + "," + req.password + ")", (err, row, fields) => {
+    const body = req.body;
+
+    connexion.query("CALL postUser(" + "'" + body.name + "'" + "," + "'" + body.surname + "'" + "," + "'" + body.location + "'" + "," + "'" + body.email + "'" + "," + "'" + body.password + "'" + ")", (err, row, fields) => {
         if(err) throw err;
         console.log(row);
         res.json({message: row});

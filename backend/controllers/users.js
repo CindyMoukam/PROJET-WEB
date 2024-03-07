@@ -9,7 +9,7 @@ exports.getAllUsers = async (req, res) => {
     
     // The connection at the database
     const connect =  dbConnect();
-    
+
     // The request to collect all of the users
     queryAllUsers(connect, req, res);
 
@@ -17,11 +17,11 @@ exports.getAllUsers = async (req, res) => {
     connect.end();
 }
 
-exports.postUser = async (req, res ) => {
+exports.postUser = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
-
+    
     // The request to collect all of the users
     queryPostUser(connect, req, res);
 
