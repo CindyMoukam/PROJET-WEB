@@ -1,10 +1,11 @@
 // Import the require dependency
-const express = require('express');
+const express = require('express');5
 const cors = require('cors');
 const mysql = require('mysql2');
 app = express();
 
 const dataRoutes = require('./routes/data');
+const userRouutes = require('./routes/users');
 
 
 // Manage the cors policy
@@ -15,8 +16,10 @@ app.use((req, res, next) => {
     next();
 });
 
-// The defualt route of the API
+// The route of the API
 app.use("/data", dataRoutes);
+app.use("/users", userRouutes);
+
 app.use(cors());
 app.use(express.json());
 
