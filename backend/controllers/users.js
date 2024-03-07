@@ -29,3 +29,13 @@ exports.postUser = async (req, res ) => {
     connect.end();
 
 }
+
+exports.DropUsers = async(req, res) =>{
+     // The connection at the database
+     const connect =  dbConnect();
+     
+     querydropUsers(connect, req, res);
+
+     connect.end();
+     
+}
