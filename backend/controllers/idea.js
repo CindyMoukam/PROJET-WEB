@@ -1,68 +1,55 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
-const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser } = require('../models/usersModel');
+const { queryAllIdea, queryPostIdea, queryUpdateIdea, queryRemoveIdea } = require('../models/ideaModel');
 
 
 // The function to collect all of the users
-exports.getAllUsers = async (req, res) => {
+exports.getAllIdea = async (req, res) => {
     
     // The connection at the database
     const connect =  dbConnect();
 
     // The request to collect all of the users
-    queryAllUsers(connect, req, res);
+    queryAllIdea(connect, req, res);
 
     //Close the connection
     connect.end();
 }
 
-// The function to collect one product
-exports.getOneUsers = async (req, res) => {
-
-    // The connection at the database
-    const connect =  dbConnect();
-
-    // The request to collect all of the users
-    queryOneUser(connect, req, res);
-
-    //Close the connection
-    connect.end();
-}
-
-exports.postUser = async (req, res) => {
+exports.postIdea = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryPostUser(connect, req, res);
+    queryPostIdea(connect, req, res);
 
     //Close the connection
     connect.end();
 
 }
 
-exports.putUser = async (req, res) => {
+exports.putIdea = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryUpdateUser(connect, req, res);
+    queryUpdateIdea(connect, req, res);
 
     //Close the connection
     connect.end();
 
 }
 
-exports.removeUser = async (req, res) => {
+exports.removeIdea = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryRemoveUser(connect, req, res);
+    queryRemoveIdea(connect, req, res);
 
     //Close the connection
     connect.end();

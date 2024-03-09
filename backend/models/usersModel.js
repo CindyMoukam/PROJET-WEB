@@ -7,6 +7,18 @@ exports.queryAllUsers = (connexion, req, res) => {
     });
 }
 
+exports.queryOneUser = (connexion, req, res) => {
+
+    // The user id
+    const userId = req.params.id;
+
+    connexion.query("CALL getOneUser(" + userId + ")", (err, row, fields) => {
+        if(err) throw err;
+        console.log(row);
+        res.json({message: row});
+    });
+}
+
 exports.queryPostUser = (connexion, req, res) => {
 
     const body = req.body;
@@ -31,9 +43,10 @@ exports.queryUpdateUser = (connexion, req, res) => {
 
 exports.queryRemoveUser = (connexion, req, res) => {
 
-    const body = req.body;
+    // The user id
+    const usertId = req.params.id;
 
-    connexion.query("CALL removeUser(" + body.id + ")", (err, row, fields) => {
+    connexion.query("CALL removeUser(" + usertId + ")", (err, row, fields) => {
         if(err) throw err;
         console.log(row);
         res.json({message: row});

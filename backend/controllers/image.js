@@ -1,68 +1,55 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
-const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser } = require('../models/usersModel');
+const { queryAllImage, queryPostImage, queryUpdateImage, queryRemoveImage } = require('../models/imageModel');
 
 
 // The function to collect all of the users
-exports.getAllUsers = async (req, res) => {
+exports.getAllImage = async (req, res) => {
     
     // The connection at the database
     const connect =  dbConnect();
 
     // The request to collect all of the users
-    queryAllUsers(connect, req, res);
+    queryAllImage(connect, req, res);
 
     //Close the connection
     connect.end();
 }
 
-// The function to collect one product
-exports.getOneUsers = async (req, res) => {
-
-    // The connection at the database
-    const connect =  dbConnect();
-
-    // The request to collect all of the users
-    queryOneUser(connect, req, res);
-
-    //Close the connection
-    connect.end();
-}
-
-exports.postUser = async (req, res) => {
+exports.postImage = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryPostUser(connect, req, res);
+    queryPostImage(connect, req, res);
 
     //Close the connection
     connect.end();
 
 }
 
-exports.putUser = async (req, res) => {
+exports.putImage = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryUpdateUser(connect, req, res);
+    queryUpdateImage(connect, req, res);
 
     //Close the connection
     connect.end();
 
 }
 
-exports.removeUser = async (req, res) => {
+exports.removeImage = async (req, res) => {
 
     // The connection at the database
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryRemoveUser(connect, req, res);
+    queryRemoveImage(connect, req, res);
 
     //Close the connection
     connect.end();

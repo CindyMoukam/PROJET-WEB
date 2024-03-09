@@ -7,6 +7,18 @@ exports.queryAllProducts = (connexion, req, res) => {
     });
 }
 
+exports.queryOneProduct = (connexion, req, res) => {
+
+    // The user id
+    const productId = req.params.id;
+
+    connexion.query("CALL getOneProduct(" + productId + ")", (err, row, fields) => {
+        if(err) throw err;
+        console.log(row);
+        res.json({message: row});
+    });
+}
+
 exports.queryPostProduct = (connexion, req, res) => {
 
     const body = req.body;
@@ -31,9 +43,10 @@ exports.queryUpdateProduct = (connexion, req, res) => {
 
 exports.queryRemoveProduct = (connexion, req, res) => {
 
-    const body = req.body;
+    // The user id
+    const productId = req.params.id;
 
-    connexion.query("CALL removeProduct(" + body.id + ")", (err, row, fields) => {
+    connexion.query("CALL removeProduct(" + productId + ")", (err, row, fields) => {
         if(err) throw err;
         console.log(row);
         res.json({message: row});
