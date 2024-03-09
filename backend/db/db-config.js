@@ -1,8 +1,10 @@
 const mysql = require('mysql2');
 
-// Configure the database connection
+
+// The function to configure the connexion with the db
 exports.dbConnect = () => {
     
+    // The db configuration
     connexion = mysql.createConnection({
         
         host: '127.0.0.1',
@@ -11,6 +13,8 @@ exports.dbConnect = () => {
         database: 'bde_chop'
     
     });
+
+    // The connexion using the previous config
     connexion.connect((err) => {
         if(err){
             console.error("Connexion failed ! : " + err.stack);
