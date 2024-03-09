@@ -11,6 +11,5 @@ router.post('/register', usersCtrl.postUser);
 router.put('/update', usersCtrl.putUser );
 // To remove the user at the db
 router.delete('/remove', usersCtrl.removeUser);
-router.delete('/remove', usersCtrl.DropUsers);
 
 module.exports = router;
