@@ -1,3 +1,6 @@
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 exports.queryAllUsers = (connexion, req, res) => {
     connexion.query("CALL getAllUsers()", (err, row, fields) => {
         if (err) throw err;
@@ -57,5 +60,24 @@ exports.queryRemoveUser = (connexion, req, res) => {
         if (err) throw err;
         console.log(row);
         res.json({ message: row });
+    });
+}
+
+exports.queryLoginUser = async (connexion, req, res) => {
+
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const sql = "SELECT * FROM users WHERE Email = ? AND Password = ?";
+    const values = [email, password];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
+        if (row.length === 0) {
+            return res.status(500).json({ message: "Username or password incorrect !" });
+        } else {
+            console.log(row);
+            res.json({ message: "Connexion successful !" });
+        }
     });
 }

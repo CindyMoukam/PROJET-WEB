@@ -9,6 +9,8 @@ router.get('/user', usersCtrl.getAllUsers);
 router.get('/user/:id', usersCtrl.getOneUsers);
 // To add user at the db
 router.post('/register', usersCtrl.postUser);
+// To login the user
+router.post('/login', usersCtrl.loginUser);
 // To update the user information of the db
 router.put('/update', usersCtrl.putUser );
 // To remove the user at the db
