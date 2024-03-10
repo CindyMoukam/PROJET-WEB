@@ -1,54 +1,61 @@
 exports.queryAllUsers = (connexion, req, res) => {
-
     connexion.query("CALL getAllUsers()", (err, row, fields) => {
-        if(err) throw err;
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryOneUser = (connexion, req, res) => {
-
-    // The user id
     const userId = req.params.id;
 
-    connexion.query("CALL getOneUser(" + userId + ")", (err, row, fields) => {
-        if(err) throw err;
+    const sql = "CALL getOneUser(?)";
+    const values = [userId];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryPostUser = (connexion, req, res) => {
-
     const body = req.body;
+    const { name, surname, location, email, password } = body;
 
-    connexion.query("CALL postUser(" + "'" + body.name + "'" + "," + "'" + body.surname + "'" + "," + "'" + body.location + "'" + "," + "'" + body.email + "'" + "," + "'" + body.password + "'" + ")", (err, row, fields) => {
-        if(err) throw err;
+    const sql = "CALL postUser(?, ?, ?, ?, ?)";
+    const values = [name, surname, location, email, password];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryUpdateUser = (connexion, req, res) => {
-
     const body = req.body;
+    const { name, surname, location, email, password, id } = body;
 
-    connexion.query("CALL updateUser(" + "'" + body.name + "'" + "," + "'" + body.surname + "'" + "," + "'" + body.location + "'" + "," + "'" + body.email + "'" + "," + "'" + body.password + "'"  + "," + body.id  + ")", (err, row, fields) => {
-        if(err) throw err;
+    const sql = "CALL updateUser(?, ?, ?, ?, ?, ?)";
+    const values = [name, surname, location, email, password, id];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryRemoveUser = (connexion, req, res) => {
+    const userId = req.params.id;
 
-    // The user id
-    const usertId = req.params.id;
+    const sql = "CALL removeUser(?)";
+    const values = [userId];
 
-    connexion.query("CALL removeUser(" + usertId + ")", (err, row, fields) => {
-        if(err) throw err;
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }

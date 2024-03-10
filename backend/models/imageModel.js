@@ -1,41 +1,56 @@
 exports.queryAllImage = (connexion, req, res) => {
-
     connexion.query("CALL getAllImage()", (err, row, fields) => {
-        if(err) throw err;
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryPostImage = (connexion, req, res) => {
-
     const body = req.body;
+    console.log(req.file);
+    console.log(body);
 
-    connexion.query("CALL postImage(" + "'" + body.name + "'" + "," + "'" + body.description + "'" + ","  + body.id  + ")", (err, row, fields) => {
-        if(err) throw err;
+    const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
+    const userId = body.user_id;
+    const eventId = body.event_id;
+
+    const sql = "CALL postImage(?, ?, ?)";
+    const values = [imageUrl, userId, eventId];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryUpdateImage = (connexion, req, res) => {
-
     const body = req.body;
+    const name = body.name;
+    const description = body.description;
+    const id = body.id;
 
-    connexion.query("CALL updateImage(" + "'" + body.name + "'" + "," + "'" + body.description + "'" + ","  + body.id  + ")", (err, row, fields) => {
-        if(err) throw err;
+    const sql = "CALL updateImage(?, ?, ?)";
+    const values = [name, description, id];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
 
 exports.queryRemoveImage = (connexion, req, res) => {
-
     const body = req.body;
+    const id = body.id;
 
-    connexion.query("CALL removeImage(" + body.id + ")", (err, row, fields) => {
-        if(err) throw err;
+    const sql = "CALL removeImage(?)";
+    const values = [id];
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
         console.log(row);
-        res.json({message: row});
+        res.json({ message: row });
     });
 }
