@@ -7,6 +7,9 @@ const userRoutes = require('./routes/users');
 const productRoutes = require('./routes/products');
 const ideaRoutes = require('./routes/idea');
 const imageRoutes = require('./routes/image');
+const EventRoutes = require('./routes/Event');
+const likeRoutes = require('./routes/like');
+const categoryRoutes = require('./routes/category');
 
 app.use(express.json());
 app.use(cors());
@@ -17,6 +20,8 @@ app.use("/users", userRoutes);
 app.use("/product", productRoutes);
 app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
+app.use("/users", EventRoutes);
+app.use("/product", likeRoutes);
 
 
 // Export the module to use it the server
