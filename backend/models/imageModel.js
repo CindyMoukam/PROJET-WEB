@@ -26,13 +26,13 @@ exports.queryPostImage = (connexion, req, res) => {
 }
 
 exports.queryUpdateImage = (connexion, req, res) => {
+
     const body = req.body;
-    const name = body.name;
-    const description = body.description;
+    const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
     const id = body.id;
 
-    const sql = "CALL updateImage(?, ?, ?)";
-    const values = [name, description, id];
+    const sql = "CALL updateImage(?, ?)";
+    const values = [id, imageUrl];
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
