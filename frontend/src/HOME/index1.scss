@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 0.05fr 0.95fr;
+    height: 100vh;
+    @media screen and (max-width : 500px){
+        grid-template-rows: 0.05fr 0.95fr;
+    }
+
+    &_div1{
+        height: 100vh;
+        padding: 10px;
+
+        &_div1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            background-color: #EC8C33;
+            border-radius: 10px;
+            width: 60px;
+            overflow: hidden;
+            transition: height 0.4s ease-in-out;
+            @media screen and (max-width : 500px){
+                flex-direction: row;
+                align-items: start;
+                width: 95vw;
+                height: 80px;
+                padding: 20px;
+                transition: height 0.4s ease-in-out;
+            }
+
+            &_box{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                
+                @media screen and (min-width : 500px){
+                    display: none;
+                }
+
+                &_div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                }
+                &_div a{
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+            &_box1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin-top: 20px;
+                @media screen and (max-width : 500px){
+                    flex-direction: row;
+                }
+
+                &_div1{
+                    background-color: black;
+                    padding: 6px;
+                    border-radius: 10px;
+                    @media screen and (max-width : 500px){
+                        display: none;
+                    }
+
+                    &-img1{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &_div1_2{
+                    @media screen and (max-width : 500px){
+                        display: none;
+                    }
+
+                    &-img1_2{
+                        width: 30px;
+                        height: 30px;
+                        fill: black;
+                    }
+                }
+
+                &_div2{
+                    @media screen and (max-width : 500px){
+                        display: none;
+                    }
+                    &-img2{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &_div2_2{
+                    background-color: black;
+                    padding: 6px;
+                    border-radius: 10px;
+                    @media screen and (max-width : 500px){
+                        display: none;
+                    }
+
+                    &-img2_2{
+                        width: 30px;
+                        height: 30px;
+                        fill: white;
+                    }
+                }
+            }
+
+            &_box2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 20px;
+                @media screen and (max-width : 500px){
+                    flex-direction: row;
+                }
+
+                &-img{
+                    @media screen and (max-width : 500px){
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &_div2{
+        height: 100vh;
+    }
+}
