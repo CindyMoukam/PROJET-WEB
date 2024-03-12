@@ -2,13 +2,14 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
     try {
-        const token = req.header.authorization.split(" ")[1];
+        const token = req.headers.authorization;
         const decodedToken = jwt.verify(token, "THIS_TOKEN_IS_FOR_THE_BDE");
-        const userId = decodedToken.userId;
+        const user_id = decodedToken.user_id;
         req.auth = {
-            useerId: userId
+            user_id: user_id
         };
+        next();
     } catch (error) {
-        res.json(401).json({ error })
+        res.status(401).json({ error: "Unauthorize" })
     }
 }
