@@ -10,7 +10,7 @@ h1{
   top: 336px;
   left: 290px;
   border-radius: 20px;
-  background-color: #F0F0F0;
+  background-color: #c1bdbd;
   padding-top: 70px;
 }
 
@@ -51,7 +51,7 @@ h1{
 	font-size: 20px;
 	cursor: pointer;
 	color: #cccccc;
-	border: 4px dashed #009578;
+	border: 4px dashed #00515ead;
 	border-radius: 10px;
     }
     .drop-zone--over{
@@ -122,8 +122,8 @@ left: 745px;
         .de{
             width:px;
             height: 70px;
-            background-color:#F0F0F0;
-            border-color:#F0F0F0 ;
+            background-color: #c1bdbd;
+            border-color: #c1bdbd ;
  }              
 .icon1 {
 position: absolute;
