@@ -3,7 +3,7 @@ const router = express.Router();
 
 const usersCtrl = require('../controllers/users');
 
-// To collect all of the users in the db
+// To collect all of the users in the db 
 router.get('/user', usersCtrl.getAllUsers);
 // To collect all of the users in the db
 router.get('/user/:id', usersCtrl.getOneUsers);
