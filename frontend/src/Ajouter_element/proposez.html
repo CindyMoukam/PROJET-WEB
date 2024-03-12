@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
     <title>evennement</title>
 </head>
-<body>
 
+<body>
     <header>
-        <h1> ADD EVENT</h1>
+        <h1>Ajoutez Evenement</h1>
     </header>
-    <main>
-<div class="container">
-    <section>
-    <div class="conteneur">
-        <div class="row ">
-            <div class="col">
-                <div class="box">
+    <div class="container">
+        <section>
+          <div class="container">
+            <div class="conteneur">
+            <div class="row">
+              <div class="col">
+                <div class="drop-zone">
+                    <div class="tr"></div>
+                  <span class="drop-zone__prompt m-3">Déplacez un fichier ou cliquez dessus</span>        
+                  <input type="file" name="" class="drop-zone__input">
+                </div>
+              </div>
+              <div class="col">
+                <div class="zone2">
+                  <div>
+                    <label for="">Titre</label>
+                  </div>
+                  <div>
+                    <input type="text" class="title" id="">
+                  </div>
+                  <div>
+                    <label for="">Description</label>
+                  </div>
+                  <div>
+                    <input type="text" class="des" name="" id="">
+                  </div>
+                  <div class="de">
                     
-                    <div class="col1">
-                        <div>
-                            <label for="">Title</label>
-                            </div>
-                            <div>
-                                <input type="text"  class="title" id="">
-                            </div>
-                            <div>
-                                <label for="">Description</label>
-                                </div>
-                                <div>
-                                    <input type="text" class="des" name="" id="">
-                                </div>
-                    </div>
-            </div>
-            <div>
-                <input type="submit" class=" plus btn btn-dark" value="Add" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class=" icon1  bi bi-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                   </svg>
-                <span class="bn">Add image</span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                  </svg></span>
+                  <input type="submit" class="plus btn btn-dark " value="Ajouter">
+                  <span class="bn">Ajouter image</span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
             </div>
-            
-        </div>
-</div>
-</section>
-</div>
-    </main>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script src="js.js"></script>
 </body>
+
 </html>
