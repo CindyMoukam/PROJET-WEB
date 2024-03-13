@@ -3,6 +3,63 @@ body {
     margin: 0;
     padding: 0;
 }
+.div0{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.body_div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    width: 100px;
+    height: 90vh;
+    border-radius: 10px;
+    padding-top: 40px;
+    margin-left: 20px;
+  }
+  .body_div1 a {
+    text-decoration: none;
+    color: white;
+  }
+  .body_div1_div1 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div1:hover {
+    background-color: #EC8C33;
+  }
+  .body_div1_div2 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div2:hover {
+    background-color: #EC8C33;
+  }
+  .body_div1_div3 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div3:hover {
+    background-color: #EC8C33;
+  }
 
 header {
     background-color: rgb(226, 123, 5);
@@ -14,35 +71,6 @@ header {
 .container {
     display: flex;
     height: 100vh;
-}
-
-.sidebar {
-    background-color: #f4f4f4;
-    width: 200px;
-    padding: 20px;
-    border-right: 1px solid #ccc; /* Ajout d'une bordure droite pour séparer la barre latérale du contenu principal */
-}
-
-.sidebar h3 {
-    margin-top: 0; /* Supprimer la marge supérieure par défaut des titres */
-    padding: 10px 0;
-    text-align: center;
-    background-color: #ddd; /* Ajouter un fond gris aux titres */
-    border-radius: 5px; /* Ajouter des coins arrondis aux titres */
-    cursor: pointer; /* Changer le curseur au survol */
-}
-
-.sidebar h3:hover {
-    background-color: #ccc; /* Change la couleur de fond au survol */
-}
-
-.sidebar a {
-    text-decoration: none; /* Supprimer la soulignement des liens */
-    color: #333; /* Changer la couleur du texte des liens */
-}
-
-.sidebar a:hover {
-    color: #555; /* Changer la couleur du texte au survol */
 }
 
 .main {
@@ -93,7 +121,7 @@ header {
 .profile-info input[type="text"],
 .profile-info input[type="email"],
 .profile-info input[type="password"] {
-    width: calc(100% - 12px); /* Ajustement de la largeur pour compenser les bordures */
+    width: calc(200% - 0px); /* Ajustement de la largeur pour compenser les bordures */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc; /* Utilisation d'une couleur de bordure plus douce */
