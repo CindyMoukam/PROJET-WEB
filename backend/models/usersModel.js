@@ -101,7 +101,6 @@ exports.queryLoginUser = async (connexion, req, res) => {
                     });
                 }
             })
-            //res.json({ message: "Connexion successful !" });
         }
     });
 }

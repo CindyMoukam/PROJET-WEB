@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
-const { queryAllcomment, queryPostcomment, queryUpdatecomment, queryRemovecomment } = require('../models/categoryModel');
+const { queryAllcomment, queryPostcomment, queryUpdatecomment, queryRemovecomment } = require('../models/commentModel');
 
 
 // The function  to collect all of the comment
