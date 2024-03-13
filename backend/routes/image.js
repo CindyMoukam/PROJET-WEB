@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth');
 
 const imageCtrl = require('../controllers/image');
 const multer = require('../middleware/multer-config');
 
 // To collect all of the users in the db
-router.get('/collect', imageCtrl.getAllImage);
+router.get('/collect', auth, imageCtrl.getAllImage);
 // To add user at the db
-router.post('/register', multer, imageCtrl.postImage);
+router.post('/register', auth, multer, imageCtrl.postImage);
 // To update the user information of the db
-router.put('/update',multer, imageCtrl.putImage);
+router.put('/update', auth, multer, imageCtrl.putImage);
 // To remove the user at the db
-router.delete('/remove', imageCtrl.removeImage);
+router.delete('/remove', auth, imageCtrl.removeImage);
 
 module.exports = router;

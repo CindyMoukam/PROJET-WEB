@@ -35,10 +35,12 @@ exports.postUser = async (req, res) => {
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryPostUser(connect, req, res);
-
-    //Close the connection
-    connect.end();
+    queryPostUser(connect, req, res)
+    .then(() => {
+        //Close the connection
+        connect.end();
+    })
+    .catch(err => res.status(500).json({ err }))
 
 }
 

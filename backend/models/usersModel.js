@@ -22,18 +22,25 @@ exports.queryOneUser = (connexion, req, res) => {
     });
 }
 
-exports.queryPostUser = (connexion, req, res) => {
-    const body = req.body;
-    const { name, surname, location, email, password } = body;
+exports.queryPostUser = async (connexion, req, res) => {
 
-    const sql = "CALL postUser(?, ?, ?, ?, ?)";
-    const values = [name, surname, location, email, password];
+    const { name, surname, location, email, password} = req.body;
+    
+    // bcrypt for encode the user password
+    await bcrypt.hash(password, 10)
+    .then( hash => {
+    
+        const sql = "CALL postUser(?, ?, ?, ?, ?)";
+        const values = [name, surname, location, email, hash];
+        
+        connexion.query(sql, values, (err, row, fields) => {
+            if (err) throw err;
+            console.log(row);
+            res.json({ message: row });
+        });
 
-    connexion.query(sql, values, (err, row, fields) => {
-        if (err) throw err;
-        console.log(row);
-        res.json({ message: row });
-    });
+    })
+    .catch(err => res.status(500).json({ err }));
 }
 
 exports.queryUpdateUser = (connexion, req, res) => {
@@ -68,16 +75,33 @@ exports.queryLoginUser = async (connexion, req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
-    const sql = "SELECT * FROM users WHERE Email = ? AND Password = ?";
-    const values = [email, password];
+    const sql = "SELECT * FROM users WHERE Email = ?";
+    const values = [email];
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
         if (row.length === 0) {
             return res.status(500).json({ message: "Username or password incorrect !" });
         } else {
-            console.log(row);
-            res.json({ message: "Connexion successful !" });
+
+            const user = row[0];
+
+            bcrypt.compare(password, user.Password)
+            .then( valid => {
+                if(!valid){
+                    return res.status(401).json({ err: "Incorrect password or email !"});
+                } else {
+                    res.status(200).json({
+                        user_id: user.id,
+                        token: jwt.sign(
+                            {user_id: user.id},
+                            "THIS_TOKEN_IS_FOR_THE_BDE",
+                            {expiresIn: "24h"}
+                        )
+                    });
+                }
+            })
+            //res.json({ message: "Connexion successful !" });
         }
     });
 }

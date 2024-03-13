@@ -1,4 +1,5 @@
 // Import the require dependency
+
 const express = require('express');
 const cors = require('cors');
 app = express();
@@ -10,6 +11,8 @@ const imageRoutes = require('./routes/image');
 const EventRoutes = require('./routes/Event');
 const likeRoutes = require('./routes/like');
 const categoryRoutes = require('./routes/category');
+const commentRoutes = require('./routes/comment');
+const messageRoutes = require('./routes/message');
 
 app.use(express.json());
 app.use(cors());
@@ -22,6 +25,13 @@ app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
 app.use("/users", EventRoutes);
 app.use("/product", likeRoutes);
+app.use("/product", messageRoutes);
+//app.use("/idea", categoryRoutes);
+app.use("/comment", commentRoutes);
+//app.use("/image", imageRoutes);
+app.use("/comment", commentRoutes);
+app.use("/category", categoryRoutes);
+
 
 
 // Export the module to use it the server
