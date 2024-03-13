@@ -3,22 +3,26 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: rgb(226, 123, 5);
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+
 .container {
     display: flex;
     height: 100vh;
 }
+
 .sidebar {
     background-color: #f4f4f4;
     width: 200px;
     padding: 20px;
     border-right: 1px solid #ccc; /* Ajout d'une bordure droite pour séparer la barre latérale du contenu principal */
 }
+
 .sidebar h3 {
     margin-top: 0; /* Supprimer la marge supérieure par défaut des titres */
     padding: 10px 0;
@@ -27,16 +31,20 @@ header {
     border-radius: 5px; /* Ajouter des coins arrondis aux titres */
     cursor: pointer; /* Changer le curseur au survol */
 }
+
 .sidebar h3:hover {
     background-color: #ccc; /* Change la couleur de fond au survol */
 }
+
 .sidebar a {
     text-decoration: none; /* Supprimer la soulignement des liens */
     color: #333; /* Changer la couleur du texte des liens */
 }
+
 .sidebar a:hover {
     color: #555; /* Changer la couleur du texte au survol */
 }
+
 .main {
     flex-grow: 1;
     padding: 20px;
@@ -45,15 +53,16 @@ header {
     align-items: center;
     flex-direction: column; /* Ajout de cette ligne pour aligner les éléments verticalement */
 }
-.profile{
+
+.profile {
     display: flex;
     align-items: center;
     border: 1px solid rgb(90, 88, 88);
     border-radius: 30px;
     background-color: #555;
-    
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre dynamique */
 }
+
 .profile-info {
     width: 500px; /* Augmenter la largeur maximale à 600px */
     height: 400px;
@@ -63,12 +72,16 @@ header {
     display: flex;
     flex-direction: column; /* Ajout de cette ligne pour aligner les éléments verticalement */
     align-items: center; /* Ajout de cette ligne pour centrer les éléments horizontalement */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre dynamique */
 }
+
 .profile-info label {
     display: block;
     margin-bottom: 10px;
-    border-radius: 30px;
+    border-radius: 5px;
+    font-weight: bold; /* Ajout de poids à la police pour mettre en évidence les étiquettes */
 }
+
 .profile-pic {
     width: 100px; /* Ajustement de la largeur */
     height: 100px; /* Ajustement de la hauteur */
@@ -79,13 +92,21 @@ header {
 
 .profile-info input[type="text"],
 .profile-info input[type="email"],
-.profile-info[type="password"] {
-    width: 100%;
-    padding: 5px;
+.profile-info input[type="password"] {
+    width: calc(100% - 12px); /* Ajustement de la largeur pour compenser les bordures */
+    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid rgb(129, 126, 126);
-    border-radius: 15px;
+    border: 1px solid #ccc; /* Utilisation d'une couleur de bordure plus douce */
+    border-radius: 10px;
     box-sizing: border-box;
+    transition: border-color 0.3s; /* Ajout d'une transition pour une expérience utilisateur plus fluide */
+}
+
+.profile-info input[type="text"]:focus,
+.profile-info input[type="email"]:focus,
+.profile-info input[type="password"]:focus {
+    border-color: rgb(226, 123, 5); /* Changement de couleur de bordure lorsqu'un champ est sélectionné */
+    outline: none; /* Suppression de la bordure de focus par défaut */
 }
 .profile-info input[type="submit"] {
     width: 100%;
@@ -96,6 +117,7 @@ header {
     border-radius: 3px;
     cursor: pointer;
 }
+
 button {
     background-color: #333;
     color: rgb(245, 252, 252);
