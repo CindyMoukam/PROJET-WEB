@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire avec mise en page</title>
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header>
+    <h1>DASHBOARD</h1>
+</header>
+<div class="container">
+    <div class="sidebar">
+        <a href="lien_vers_profil_page"><h3>Profil</h3></a>
+        <a href="lien_vers_users_page"><h3>Users</h3></a>
+        <a href="lien_vers_products_page"><h3>Products</h3></a>
+    </div>
+    
+    <div class="main">
+        <h2>MY PROFIL</h2>
+        <div class="profile">
+            <div class="profile-pic">
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*"><br>
+            </div>
+             <!-- Déplacer cette ligne avant les autres éléments -->
+             <div class="profile-info">
+                <label for="nom">Name:</label>
+                <input type="text" id="nom" name="nom" placeholder="Name" required><br>
+                <label for="surnom">Surname:</label>
+                <input type="text" id="surnom" name="surnom" placeholder="Surname" required><br>
+                <label for="adresse">Loacalisation: </label> 
+                <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <label for="passwort">Password:</label>
+                <input type="password" id="password" name="passwoard" placeholder="Password" required><br>
+                <button onclick="saveChanges()"> RESET</button>
+            </div>*
+        </div>
+            
+        </div> 
+    </div>
+</div>
+</body>
+</html>
