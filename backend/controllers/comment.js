@@ -31,7 +31,8 @@ exports.postcomment = async (req, res) => {
 }
 exports.putcomment = async (req, res) => {
 
-    // The connection  at the database
+    // The  connection  at the database
+    
     const connect =  dbConnect();
     
     // The request to collect  all of the comment

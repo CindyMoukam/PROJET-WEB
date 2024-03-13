@@ -4,6 +4,7 @@ exports.queryAllcomment = (connexion, req, res) => {
         if(err) throw err;
         console.log(row);
         res.json({message: row});
+        
     });
 }
 
