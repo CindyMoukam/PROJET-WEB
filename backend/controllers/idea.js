@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
 const { queryAllIdea, queryPostIdea, queryUpdateIdea, queryRemoveIdea } = require('../models/ideaModel');

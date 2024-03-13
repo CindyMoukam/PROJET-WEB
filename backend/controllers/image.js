@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
 const { queryAllImage, queryPostImage, queryUpdateImage, queryRemoveImage } = require('../models/imageModel');

@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
 const { queryAllProducts, queryPostProduct, queryUpdateProduct, queryRemoveProduct, queryOneProduct } = require('../models/productModel');
