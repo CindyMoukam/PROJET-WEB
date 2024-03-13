@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 .div0{
+    background-image: url('roro.jpg');
+    background-size: cover; /* Ajuste la taille de l'image pour remplir l'arrière-plan */
+    background-position: center; /* Centre l'image par rapport à l'arrière-plan */
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     align-items: center;
