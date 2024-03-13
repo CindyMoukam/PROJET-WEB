@@ -22,6 +22,7 @@ app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
 app.use("/users", EventRoutes);
 app.use("/product", likeRoutes);
+app.use("/category", categoryRoutes);
 
 
 // Export the module to use it the server
