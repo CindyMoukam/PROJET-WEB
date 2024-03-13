@@ -12,6 +12,7 @@ const EventRoutes = require('./routes/Event');
 const likeRoutes = require('./routes/like');
 const categoryRoutes = require('./routes/category');
 const commentRoutes = require('./routes/comment');
+const commentmessage = require('./routes/message');
 
 app.use(express.json());
 app.use(cors());
@@ -24,13 +25,12 @@ app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
 app.use("/users", EventRoutes);
 app.use("/product", likeRoutes);
-<<<<<<< HEAD
-app.use("/idea", categoryRoutes);
+app.use("/product", messageRoutes);
+//app.use("/idea", categoryRoutes);
 app.use("/comment", commentRoutes);
 //app.use("/image", imageRoutes);
-=======
 app.use("/category", categoryRoutes);
->>>>>>> a3d950aa928c69d2d813910cc1a0658a5c244f53
+
 
 
 // Export the module to use it the server
