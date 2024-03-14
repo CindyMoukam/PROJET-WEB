@@ -100,6 +100,7 @@ header {
     height: 400px;
     background-color: rgb(192, 188, 188);
     padding: 55px;
+    margin: 30px;
     border-radius: 30px;
     display: flex;
     flex-direction: column; /* Ajout de cette ligne pour aligner les éléments verticalement */
@@ -115,11 +116,18 @@ header {
 }
 
 .profile-pic {
-    width: 100px; /* Ajustement de la largeur */
+    max-width: 100px; /* Ajustement de la largeur */
     height: 100px; /* Ajustement de la hauteur */
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksa';
     border: 2px solid rgb(243, 240, 240);
-    border-radius: 30px;
+    border-radius: 60px;
     margin-bottom: 20px;
+    margin: 10px;
 }
 
 .profile-info input[type="text"],
