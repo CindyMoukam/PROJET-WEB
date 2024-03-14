@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.div0{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.body_div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    width: 100px;
+    height: 90vh;
+    border-radius: 10px;
+    padding-top: 40px;
+    margin-left: 20px;
+  }
+  .body_div1 a {
+    text-decoration: none;
+    color: white;
+  }
+  .body_div1_div1 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div1:hover {
+    background-color: #EC8C33;
+  }
+  .body_div1_div2 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div2:hover {
+    background-color: #EC8C33;
+  }
+  .body_div1_div3 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .body_div1_div3:hover {
+    background-color: #EC8C33;
+  }
+
+header {
+    background-color: rgb(226, 123, 5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ajout de cette ligne pour aligner les éléments verticalement */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(90, 88, 88);
+    border-radius: 30px;
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre dynamique */
+}
+
+.profile-info {
+    width: 500px; /* Augmenter la largeur maximale à 600px */
+    height: 400px;
+    background-color: rgb(192, 188, 188);
+    padding: 55px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column; /* Ajout de cette ligne pour aligner les éléments verticalement */
+    align-items: center; /* Ajout de cette ligne pour centrer les éléments horizontalement */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre dynamique */
+}
+
+.profile-info label {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold; /* Ajout de poids à la police pour mettre en évidence les étiquettes */
+}
+
+.profile-pic {
+    width: 100px; /* Ajustement de la largeur */
+    height: 100px; /* Ajustement de la hauteur */
+    border: 2px solid rgb(243, 240, 240);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-info input[type="text"],
+.profile-info input[type="email"],
+.profile-info input[type="password"] {
+    width: calc(200% - 0px); /* Ajustement de la largeur pour compenser les bordures */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Utilisation d'une couleur de bordure plus douce */
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Ajout d'une transition pour une expérience utilisateur plus fluide */
+}
+
+.profile-info input[type="text"]:focus,
+.profile-info input[type="email"]:focus,
+.profile-info input[type="password"]:focus {
+    border-color: rgb(226, 123, 5); /* Changement de couleur de bordure lorsqu'un champ est sélectionné */
+    outline: none; /* Suppression de la bordure de focus par défaut */
+}
+.profile-info input[type="submit"] {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #333;
+    color: rgb(245, 252, 252);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
