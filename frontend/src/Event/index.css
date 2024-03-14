@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: 0.05fr 0.95fr;
   height: 100vh;
+  
 }
 @media screen and (max-width: 500px) {
   .body {
@@ -17,6 +18,7 @@
 .body_div1 {
   height: 100vh;
   padding: 10px;
+  
 }
 .body_div1_div1 {
   display: flex;
@@ -142,6 +144,8 @@
 }
 .body_div2 {
   height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
 }
 .container {
   display: flex;
@@ -156,7 +160,7 @@
   height: 260px;
   margin: 20px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   
