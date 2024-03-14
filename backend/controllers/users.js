@@ -1,7 +1,6 @@
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
-const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser } = require('../models/usersModel');
+const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser, queryLoginUser } = require('../models/usersModel');
 
 
 // The function to collect all of the users
@@ -36,10 +35,12 @@ exports.postUser = async (req, res) => {
     const connect =  dbConnect();
     
     // The request to collect all of the users
-    queryPostUser(connect, req, res);
-
-    //Close the connection
-    connect.end();
+    queryPostUser(connect, req, res)
+    .then(() => {
+        //Close the connection
+        connect.end();
+    })
+    .catch(err => res.status(500).json({ err }))
 
 }
 
@@ -63,6 +64,19 @@ exports.removeUser = async (req, res) => {
     
     // The request to collect all of the users
     queryRemoveUser(connect, req, res);
+
+    //Close the connection
+    connect.end();
+
+}
+
+exports.loginUser = async (req, res) => {
+
+    // The connection at the database
+    const connect =  dbConnect();
+    
+    // The request to collect all of the users
+    queryLoginUser(connect, req, res);
 
     //Close the connection
     connect.end();

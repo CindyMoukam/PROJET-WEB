@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire avec mise en page</title>
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header>
+    <h1>DASHBOARD</h1>
+</header>
+<div class="div0">
+<div class="body_div1">
+    <div class="body_div1_div1">
+                <a href=""><p>Profile</p></a>
+            </div>
+            <div class="body_div1_div2">
+                <a href=""><p>Users</p></a>
+            </div>
+            <div class="body_div1_div3">
+                <a href=""><p>Products</p></a>
+            </div>
+    </div>
+    
+    <div class="main">
+        <h2>MY PROFIL</h2>
+        <div class="profile">
+            <div class="profile-pic">
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*"><br>
+            </div>
+             <!-- Déplacer cette ligne avant les autres éléments -->
+             <div class="profile-info">
+                <form>
+                    <label for="nom">Name:</label>
+                    <input type="text" id="nom" name="nom" placeholder="Name" required><br>
+                    <label for="surnom">Surname:</label>
+                    <input type="text" id="surnom" name="surnom" placeholder="Surname" required><br>
+                    <label for="adresse">Localisation:</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="passwoard" placeholder="Password" required><br>
+                    <input type="submit" value="Soumettre">
+                </form>
+            </div>
+        </div>
+        </div> 
+</div>
+</body>
+</html>
