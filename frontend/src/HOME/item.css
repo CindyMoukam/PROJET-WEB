@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 0.05fr 0.95fr;
+  height: 100vh;
+}
+@media screen and (max-width: 500px) {
+  .body {
+    grid-template-rows: 0.05fr 0.95fr;
+  }
+}
+.body_div1 {
+  height: 100vh;
+  padding: 10px;
+}
+.body_div1_div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: #EC8C33;
+  border-radius: 10px;
+  width: 60px;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1 {
+    flex-direction: row;
+    align-items: start;
+    width: 95vw;
+    height: 80px;
+    padding: 20px;
+    transition: height 0.4s ease-in-out;
+  }
+}
+.body_div1_div1_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (min-width: 500px) {
+  .body_div1_div1_box {
+    display: none;
+  }
+}
+.body_div1_div1_box_div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.body_div1_div1_box_div a {
+  text-decoration: none;
+  color: black;
+}
+.body_div1_div1_box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box1 {
+    flex-direction: row;
+  }
+}
+.body_div1_div1_box1_div1 {
+  background-color: black;
+  padding: 6px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box1_div1 {
+    display: none;
+  }
+}
+.body_div1_div1_box1_div1-img1 {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box1_div1_2 {
+    display: none;
+  }
+}
+.body_div1_div1_box1_div1_2-img1_2 {
+  width: 30px;
+  height: 30px;
+  fill: black;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box1_div2 {
+    display: none;
+  }
+}
+.body_div1_div1_box1_div2-img2 {
+  width: 30px;
+  height: 30px;
+}
+.body_div1_div1_box1_div2_2 {
+  background-color: black;
+  padding: 6px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box1_div2_2 {
+    display: none;
+  }
+}
+.body_div1_div1_box1_div2_2-img2_2 {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+.body_div1_div1_box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box2 {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body_div1_div1_box2-img {
+    display: none;
+  }
+}
+ 
+
+ /* Styles par défaut pour les petits écrans */
+body {
+  font-size: 16px;
+}
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
+  }
+}
+
+/* Styles pour les écrans de taille grande (ordinateurs de bureau) */
+@media (min-width: 992px) {
+  body {
+      font-size: 20px;
+  }
+}
+
+/* Styles pour les écrans extra-grands (ordinateurs de bureau larges) */
+@media (min-width: 1200px) {
+  body {
+      font-size: 22px;
+  }
+}
+
+Styles pour le corps du site */
+body {
+ color: #333;
+ line-height: 1.6;
+}
+
+/* Styles pour le conteneur principal */
+.body_div2 {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ 
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligne les éléments au début du conteneur (début de l'axe transversal) */
+  flex-wrap: wrap;
+  margin-top: -800px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Assure que le wrapper prend toute la largeur disponible */
+  height: 80vh; /* Assure que le wrapper prend toute la hauteur de la fenêtre */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne les éléments à gauche */
+  padding: 10px;
+  justify-content: center;
+  margin-top: -200px; /* Ajustez cette valeur pour contrôler l'espacement vers le haut */
+  width: 80vw; /* Largeur relative à la fenêtre */
+  gap: 2px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Correction de la valeur manquante */
+  flex-grow: 1; /* Permet au conteneur de prendre tout l'espace disponible */
+}
+
+.product-container figure a img {
+  height: 50px; /* Hauteur automatique pour s'adapter au conteneur */
+  width: 50px; /* Largeur automatique pour s'adapter au conteneur */
+}
+
+.product-card {
+  padding: 10px;
+  margin: 5px;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0px 50px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+#shop-box {
+  margin-top: -100px; /* Ajustez cette valeur pour faire monter le box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 300px; /* Permet au box de s'étendre verticalement */
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  margin-left:auto; /* Aligne le conteneur à droite */
+}
+
+#shop-box .bag {
+  margin-left: auto; /* Aligne l'élément "Bag" à droite */
+  align-items: center;
+}
+
+#shop-box .image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+#bouton {
+  background-color: orange;
+}
