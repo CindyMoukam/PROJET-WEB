@@ -142,138 +142,171 @@
 }
 .body_div2 {
   height: 100vh;
+  display: flex;
+  justify-content: space-between; /* Sépare le conteneur de produits et le "box" */
 }/*# sourceMappingURL=index.css.map */
 
-
-/* Styles pour la barre de recherche */
-.search-bar {
-  background-color: #f2f2f2;
-  padding: 10px 20px;
-  text-align: center;
-  width: 40%; /* Réduire la largeur à 50% */
-  margin: 0 auto; /* Centrer horizontalement */
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px
+/* Réinitialisation de la police et des marges */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
  }
  
+ /* Styles pour le corps du site */
+ body {
+  color: #333;
+  line-height: 1.6;
+ }
+ 
+ /* Styles pour le conteneur principal */
+ .body_div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ }
+ .search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom:20px;
+  margin-right: 20%; /* Ajoute une marge à droite pour reculer la barre de recherche */
+  margin-top: 90px;
+
+ }
+
+ 
  .search-bar input[type="text"] {
-  width: 70%; /* Réduire la largeur du champ de recherche */
-  height: 40px;
-  padding: 5px;
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
+  padding: 10px;
+  width: 800px; /* La largeur de la barre de recherche reste la même */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Ajoute un fond clair pour une meilleure lisibilité */
+  transition: border 0.3s ease; /* Transition pour le changement de bordure */
+  margin-top: 1px;
+ }
+ 
+ .search-bar input[type="text"]:focus {
+  border: 1.5px solid #009688; /* Bordure plus épaisse et couleur lorsqu'en focus */
+  background-color: white; /* Fond blanc lorsqu'en focus */
  }
  
  .search-bar button {
-  background-color: orange;
+  padding: 10px 20px;
+  margin-left: 20px; /* La marge à gauche reste la même */
+  background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 25px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
  }
  
  .search-bar button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Couleur de fond plus foncée lors du survol */
  }
  
- /* Styles pour le conteneur de produits */
+ 
+
+
+ .wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
  .product-container {
   display: flex;
+  flex-direction: row;
+  position:relative;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 80vw;
+  gap: 30px;
+  padding: 20px;
+  
+ }
+ .product-container figure a img {
+  height: 100px;
+  width: 200px;
  }
  
- /* Styles pour les cartes de produits */
  .product-card {
   padding: 15px;
-  margin-bottom: 10px;
-  margin: 5px;
-  width: 25%;
-  transition: margin-left 0.5s ease; /* Ajoute une transition pour un effet fluide */
-  border: 1px solid antiquewhite; /* Ajoute une bordure autour de chaque produit */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ajoute une ombre pour un effet 3D */
- }
- 
- /* Styles pour les images */
- img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0px 100px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
  }
  
- img:hover {
-  transform: scale(1.1);
+ 
+ .product-card:hover {
+  transform: scale(1.05);
  }
  
- /* Styles pour les légendes d'images */
- figure {
-  text-align: center;
-  margin: 10px 0;
+ 
+ .product-card a img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
  }
  
- figcaption {
-  font-style: italic;
-  color: black;
-  margin-top: 5px;
+ #shop-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  height:300px; /* Permet au box de s'étendre verticalement */
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  box-shadow: 0 0px 800px rgba(0, 0, 0, 0.1);
  }
  
- /* Styles pour le conteneur de panier */
- .cart-container {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 300px; /* Largeur du panier */
-  height: 100%;
-  background-color: #f9f9f9; /* Couleur de fond du panier */
-  padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre pour le panier */
-  display: none; /* Cache le panier initialement */
-  overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */
-  
+ #shop-box .image {
+  display: flex;
+  flex-direction: row ;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 300px;
+  align-items: center;
+  border-radius: 10px;
  }
  
- #view-cart-btn {
-  margin-top: auto; /* Pousse le bouton vers le bas */
-    background-color: orange;
-    color: white;
-    padding: 10px 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 10px;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
+ 
+ #shop-box .image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
  }
+ 
 
 
- /* Styles par défaut pour les petits écrans */
-body {
-  font-size: 16px;
-}
 
-/* Styles pour les écrans de taille moyenne (tablettes) */
-@media (min-width: 768px) {
-  body {
-      font-size: 18px;
+
+ 
+/* Styles pour la simulation de responsivité lors de l'inspection */
+@media screen and (max-width: 600px) {
+  .body_div2:hover .body_div1_div1 {
+    order: 1;
+    flex-basis: 100%;
+    max-width: 100%;
   }
-}
 
-/* Styles pour les écrans de taille grande (ordinateurs de bureau) */
-@media (min-width: 992px) {
-  body {
-      font-size: 20px;
+  .body_div2:hover .search-bar {
+    order: 3;
   }
-}
 
-/* Styles pour les écrans extra-grands (ordinateurs de bureau larges) */
-@media (min-width: 1200px) {
-  body {
-      font-size: 22px;
+  .body_div2:hover .product-container {
+    order: 2;
   }
 }
