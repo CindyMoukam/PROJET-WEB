@@ -21,10 +21,12 @@ exports.queryOneProduct = (connexion, req, res) => {
 
 exports.queryPostProduct = (connexion, req, res) => {
     const body = req.body;
-    const { name, description, image, category, price, quantity, sold } = body;
+    console.log(req.file);
+    const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
+    const { name, description, category, price, quantity } = body;
 
-    const sql = "CALL postProduct(?, ?, ?, ?, ?, ?, ?)";
-    const values = [name, description, image, category, price, quantity, sold];
+    const sql = "CALL postProduct(?, ?, ?, ?, ?, ?)";
+    const values = [name, description, imageUrl, category, price, quantity];
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
@@ -35,10 +37,11 @@ exports.queryPostProduct = (connexion, req, res) => {
 
 exports.queryUpdateProduct = (connexion, req, res) => {
     const body = req.body;
-    const { name, description, image, category, price, quantity, sold, id } = body;
+    const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
+    const { name, description, category, price, quantity, sold, id } = body;
 
     const sql = "CALL updateProduct(?, ?, ?, ?, ?, ?, ?, ?)";
-    const values = [name, description, image, category, price, quantity, sold, id];
+    const values = [name, description, imageUrl, category, price, quantity, sold, id];
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;

@@ -23,12 +23,9 @@ app.use("/users", userRoutes);
 app.use("/product", productRoutes);
 app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
-app.use("/users", EventRoutes);
-app.use("/product", likeRoutes);
-app.use("/product", messageRoutes);
-//app.use("/idea", categoryRoutes);
-app.use("/comment", commentRoutes);
-//app.use("/image", imageRoutes);
+app.use("/event", EventRoutes);
+app.use("/like", likeRoutes);
+app.use("/message", messageRoutes);
 app.use("/comment", commentRoutes);
 app.use("/category", categoryRoutes);
 
