@@ -358,4 +358,12 @@
      font-size: 0.8em; /* Réduit encore plus la taille du texte */
   }
  }
+
+ .btn{
+  background: #f49d4b;
+  width: 58px;
+  height: 28px;
+  border: none;
+  border-radius: 5px;
+ }
  
