@@ -1,3 +1,4 @@
+DELIMITER //
 CREATE PROCEDURE updateEvent(
     IN p_name VARCHAR(255),
     IN p_description TEXT,
@@ -15,4 +16,5 @@ BEGIN
         start_time = p_start_time,
         end_time = p_end_time
     WHERE name = p_name;
-END
+END //
+DELIMITER ;

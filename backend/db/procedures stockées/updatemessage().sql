@@ -1,3 +1,4 @@
+DELIMITER //
 CREATE PROCEDURE updatemessage(
     IN p_id INT -- Paramètre d'entrée pour l'id
 )
@@ -6,4 +7,5 @@ BEGIN
     UPDATE TABLE message
     SET content = 'Nouveau message'
     WHERE name = p_id; -- Utilisation du paramètre d'entrée dans la condition WHERE
-END
+END //
+DELIMITER ;

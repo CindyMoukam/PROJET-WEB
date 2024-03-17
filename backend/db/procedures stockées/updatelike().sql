@@ -1,3 +1,4 @@
+DELIMITER //
 CREATE PROCEDURE updatelike(
     IN p_Id_user INT,
     IN p_Id_image INT
@@ -7,4 +8,5 @@ BEGIN
     UPDATE Likes
     SET Id_user = p_Id_user
     WHERE Id_image = p_Id_image;
-END
+END //
+DELIMITER ;
