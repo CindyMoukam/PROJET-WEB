@@ -17,4 +17,4 @@ const storage = multer.diskStorage({
     }
 })
 
-module.exports = multer({ storage }).single('images');
+module.exports = multer({ storage, limits: { fieldSize: 100 * 1024 * 1024 } }).single('images');

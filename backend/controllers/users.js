@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const { dbConnect } = require('../db/db-config');
-const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser, queryLoginUser } = require('../models/usersModel');
+const { queryAllUsers, queryPostUser, queryUpdateUser, queryRemoveUser, queryOneUser, queryLoginUser, queryPromote } = require('../models/usersModel');
 
 
 // The function to collect all of the users
@@ -77,6 +77,19 @@ exports.loginUser = async (req, res) => {
     
     // The request to collect all of the users
     queryLoginUser(connect, req, res);
+
+    //Close the connection
+    connect.end();
+
+}
+
+exports.promoteUser = async (req, res) => {
+
+    // The connection at the database
+    const connect =  dbConnect();
+    
+    // The request to collect all of the users
+    queryPromote(connect, req, res);
 
     //Close the connection
     connect.end();

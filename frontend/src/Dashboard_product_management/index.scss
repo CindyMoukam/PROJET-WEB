@@ -114,18 +114,20 @@
                 &_div{
                     width: 100%;
                     background-color: white;
-                    height: 40px;
+                    height: 120px;
                     border-radius: 10px;
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-around;
+                    text-align: center;
+                    gap: 10px;
                     @media screen and (max-width : 565px){
-                        height: 60px;
+                        height: 130px;
                     }
                     @media screen and (max-width: 464px) {
-                        height: 120px;
+                        height: 200px;
                     }
 
                     &_div{

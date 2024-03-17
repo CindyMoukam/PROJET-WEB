@@ -1,5 +1,6 @@
+DROP TABLE users IF EXISTS;
 CREATE TABLE users (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     Surname VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,
@@ -9,7 +10,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE events (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     Description VARCHAR(255) NOT NULL,
     status INT NOT NULL,
@@ -20,7 +21,7 @@ CREATE TABLE events (
 );
 
 CREATE TABLE image (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Path VARCHAR(255) NOT NULL,
     id_user INT  NOT NULL,
     id_event INT NOT NULL,
@@ -30,13 +31,13 @@ CREATE TABLE image (
 );
 
 CREATE TABLE category (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
 );
 
 CREATE TABLE idea (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     Description VARCHAR(255) NOT NULL,
     id_user INT NOT NULL,
@@ -45,7 +46,7 @@ CREATE TABLE idea (
 );
 
 CREATE TABLE likes (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     id_user INT NOT NULL,
     id_image INT NOT NULL,
     PRIMARY KEY(id),
@@ -54,7 +55,7 @@ CREATE TABLE likes (
 );
 
 CREATE TABLE products (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,
     Description VARCHAR(255) NOT NULL,
     Category VARCHAR(255) NOT NULL,
@@ -67,7 +68,7 @@ CREATE TABLE products (
 
 
 CREATE TABLE notification (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Content VARCHAR(255) NOT NULL,
     id_user INT NOT NULL,
     dates DATE NOT NULL,
@@ -76,14 +77,14 @@ CREATE TABLE notification (
 );
 
 CREATE TABLE product_table (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     id_product INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(id_product) REFERENCES products(id)
 );
 
 CREATE TABLE basket (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     id_product_table INT NOT NULL,
     id_user INT NOT NULL,
     Price INT NOT NULL,
@@ -93,7 +94,7 @@ CREATE TABLE basket (
 );
 
 CREATE TABLE comments (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     Content VARCHAR(255) NOT NULL,
     id_user INT NOT NULL,
     dates DATE NOT NULL,
@@ -102,7 +103,7 @@ CREATE TABLE comments (
 );
 
 CREATE TABLE basket_archive (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     id_product_table INT NOT NULL,
     id_user INT NOT NULL,
     Price INT NOT NULL,

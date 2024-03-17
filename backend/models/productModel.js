@@ -31,7 +31,7 @@ exports.queryPostProduct = (connexion, req, res) => {
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
         console.log(row);
-        res.json({ message: row });
+        res.json({ message: row, status: "ok" });
     });
 }
 
@@ -51,10 +51,11 @@ exports.queryUpdateProduct = (connexion, req, res) => {
 }
 
 exports.queryRemoveProduct = (connexion, req, res) => {
-    const productId = req.params.id;
+    const productId = req.body.id;
 
     const sql = "CALL removeProduct(?)";
     const values = [productId];
+    console.log(productId);
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
