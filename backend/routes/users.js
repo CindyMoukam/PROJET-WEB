@@ -8,7 +8,7 @@ const usersCtrl = require('../controllers/users');
 // To collect all of the users in the db
 router.get('/collect', usersCtrl.getAllUsers);
 // To collect one users in the db
-router.get('/user/:id', auth, usersCtrl.getOneUsers);
+router.get('/user', usersCtrl.getOneUsers);
 // To add user at the db
 router.post('/register', usersCtrl.postUser);
 // To login the user
@@ -18,6 +18,8 @@ router.put('/update', auth, usersCtrl.putUser );
 // To remove a user at the db
 router.delete('/remove', auth, usersCtrl.removeUser);
 // To promote the users
-router.put('/promote', auth, usersCtrl.promoteUser)
+router.put('/promote', usersCtrl.promoteUser);
+// To promote the users
+router.put('/degrade', usersCtrl.degradeUser);
 
 module.exports = router;

@@ -10,7 +10,8 @@ exports.queryAllUsers = (connexion, req, res) => {
 }
 
 exports.queryOneUser = (connexion, req, res) => {
-    const userId = req.params.id;
+    const userId = req.body.id;
+    console.log(req.body);
 
     const sql = "CALL getOneUser(?)";
     const values = [userId];
@@ -108,6 +109,18 @@ exports.queryLoginUser = async (connexion, req, res) => {
 exports.queryPromote = (connexion, req, res) => {
     
     const sql = "CALL promoteUser(?)";
+    const values = req.body.id;
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
+        console.log(row);
+        res.json({ message: row });
+    });
+}
+
+exports.queryDegrade = (connexion, req, res) => {
+    
+    const sql = "CALL degradeUser(?)";
     const values = req.body.id;
 
     connexion.query(sql, values, (err, row, fields) => {

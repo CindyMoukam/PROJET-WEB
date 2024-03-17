@@ -61,7 +61,7 @@ var data = async () => {
                 <p>${data.Privilege}</p>
                 <div class="body_div2_div1_div_div_div">
                     <input type="button" name="remove" id="${data.id}" value="remove" class="remove">
-                    <input type="button" name="promote" id="${data.id}" value="promote" class="promote">
+                    <input type="button" name="promote" id="${data.id}" value="promote" class="promote" data-privilege="${data.Privilege}">
                 </div>
             </div>
             `;
@@ -79,7 +79,7 @@ var data = async () => {
         console.log(removeArray);
         removeArray.forEach(element => {
             element.addEventListener("click", async (e) => {
-                
+
                 var data = await fetch_data( url + '/remove', "DELETE", {id: element.id})
                 .then(data => {
                     console.log("The product have beeen deleted succesfully")
@@ -89,7 +89,38 @@ var data = async () => {
             })
         });
 
-        // Promote the users
+        // Promote the or degrade users
+        const promote = document.querySelectorAll(".promote");
+        const promoteArray = Array.from(promote);
+        console.log(promoteArray);
+        promoteArray.forEach(element => {
+            element.addEventListener("click", async (e) => {
+                
+                const privilege = parseInt(element.dataset.privilege);
+
+                if(privilege === 0){
+
+                    var data = await fetch_data( url + '/promote', "PUT", {id: element.id})
+                    .then(data => {
+                        console.log("The user have been promoted successfully !!")
+                    })
+                    .catch(err => err);
+
+                } else {
+
+                    var data = await fetch_data( url + '/degrade', "PUT", {id: element.id})
+                    .then(data => {
+                        console.log("The user have been degrade successfully !!")
+                    })
+                    .catch(err => err);
+
+                }
+
+    
+            })
+        });
+        
+        // Degrate th user
 
         
     })
