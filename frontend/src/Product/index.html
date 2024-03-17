@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire avec mise en page</title>
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header>
+    <h1>DASHBOARD</h1>
+</header>
+<div class="div0">
+<div class="body_div1">
+    <div class="body_div1_div1">
+                <a href="../Dashboard-profil/index.html"><p>Profile</p></a>
+            </div>
+            <div class="body_div1_div2">
+                <a href="../Dashboard_user_management/index.html"><p>Users</p></a>
+            </div>
+            <div class="body_div1_div3">
+                <a href="../Dashboard_product_management/index.html"><p>Products</p></a>
+            </div>
+            <div class="body_div1_div4">
+                <a href="../Idea/index.html"><p>Events</p></a>
+            </div>
+    </div>
+    
+    <div class="main">
+        <h2>ADD PRODUCTS</h2>
+        <div class="profile">
+            
+             <!-- Déplacer cette ligne avant les autres éléments -->
+             <div class="profile-info">
+                <form class="formulaire-1">
+                    <div class="drop-zone">
+                        <div class="tr"></div>
+                      <span class="drop-zone__prompt m-3 ">Drop file here or click to upload</span>        
+                      <input type="file" name="" class="drop-zone__input">
+                    </div>
+                    <div class="formulaire">
+                    <label for="nom">Name:</label>
+                    <input type="text" id="nom" name="nom" placeholder="Name" required><br>
+                    <label for="surnom">Surname:</label>
+                    <input type="text" id="surnom" name="surnom" placeholder="Surname" required><br>
+                    <label for="adresse">Localisation:</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="passwoard" placeholder="Password" required><br>
+                    <input type="submit" value="RESET">
+                </div>
+                </form>
+            </div>
+        </div>
+        </div> 
+</div>
+<script src="js.js"></script>
+<script scr="./src/Dashboard-profil/script.js"></script>
+</body>
+</html>

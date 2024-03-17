@@ -13,27 +13,32 @@
 <div class="div0">
 <div class="body_div1">
     <div class="body_div1_div1">
-                <a href=""><p>Profile</p></a>
+                <a href="../Dashboard-profil/index.html"><p>Profile</p></a>
             </div>
             <div class="body_div1_div2">
-                <a href=""><p>Users</p></a>
+                <a href="../Dashboard_user_management/index.html"><p>Users</p></a>
             </div>
             <div class="body_div1_div3">
-                <a href=""><p>Products</p></a>
+                <a href="../Dashboard_product_management/index.html"><p>Products</p></a>
+            </div>
+            <div class="body_div1_div4">
+                <a href="../Idea/index.html"><p>Events</p></a>
             </div>
     </div>
     
     <div class="main">
         <h2>MY PROFIL</h2>
         <div class="profile">
-            <div class="profile-pic">
-                <span class="profile-pic__prompt">Drop file here or click to upload</span>
-                <label for="photo">Photo:</label>
-                <input type="file" id="photo" name="photo" accept="image/*"><br>
-            </div>
+            
              <!-- Déplacer cette ligne avant les autres éléments -->
              <div class="profile-info">
-                <form>
+                <form class="formulaire-1">
+                    <div class="drop-zone">
+                        <div class="tr"></div>
+                      <span class="drop-zone__prompt m-3 ">Drop file here or click to upload</span>        
+                      <input type="file" name="" class="drop-zone__input">
+                    </div>
+                    <div class="formulaire">
                     <label for="nom">Name:</label>
                     <input type="text" id="nom" name="nom" placeholder="Name" required><br>
                     <label for="surnom">Surname:</label>
@@ -45,11 +50,13 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="passwoard" placeholder="Password" required><br>
                     <input type="submit" value="RESET">
+                </div>
                 </form>
             </div>
         </div>
         </div> 
 </div>
+<script src="js.js"></script>
 <script scr="./src/Dashboard-profil/script.js"></script>
 </body>
 </html>

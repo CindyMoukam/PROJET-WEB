@@ -142,4 +142,228 @@
 }
 .body_div2 {
   height: 100vh;
-}/*# sourceMappingURL=index1.css.map */
+  display: flex;
+  justify-content: space-between; /* Sépare le conteneur de produits et le "box" */
+}/*# sourceMappingURL=index.css.map */
+
+/* Réinitialisation de la police et des marges */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+ }
+ 
+ /* Styles pour le corps du site */
+ body {
+  color: #333;
+  line-height: 1.6;
+ }
+ 
+ /* Styles pour le conteneur principal */
+ .body_div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ }
+ .search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 20%; /* Ajoute une marge à droite pour reculer la barre de recherche */
+ }
+ 
+ .search-bar input[type="text"] {
+  padding: 10px;
+  width: 800px; /* La largeur de la barre de recherche reste la même */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Ajoute un fond clair pour une meilleure lisibilité */
+  transition: border 0.3s ease; /* Transition pour le changement de bordure */
+ }
+ 
+ .search-bar input[type="text"]:focus {
+  border: 1.5px solid #009688; /* Bordure plus épaisse et couleur lorsqu'en focus */
+  background-color: white; /* Fond blanc lorsqu'en focus */
+ }
+ 
+ .search-bar button {
+  padding: 10px 20px;
+  margin-left: 20px; /* La marge à gauche reste la même */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+ }
+ 
+ .search-bar button:hover {
+  background-color: #45a049; /* Couleur de fond plus foncée lors du survol */
+ }
+ 
+ 
+
+
+ .wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .product-container {
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  justify-content: center;
+  margin-top: 40px;
+  width: 80vw;
+  gap: 30px;
+  padding: 20px;
+  
+ }
+ .product-container figure a img {
+  height: 100px;
+  width: 200px;
+ }
+ 
+ .product-card {
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0px 100px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+ }
+ 
+ 
+ .product-card:hover {
+  transform: scale(1.05);
+ }
+ 
+ 
+ .product-card a img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10 px;
+ }
+ 
+ #shop-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  height:300px; /* Permet au box de s'étendre verticalement */
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  box-shadow: 0 0px 800px rgba(0, 0, 0, 0.1);
+ }
+ 
+ #shop-box .image {
+  display: flex;
+  flex-direction: row ;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 300px;
+  align-items: center;
+  border-radius: 10px;
+ }
+ 
+ 
+ #shop-box .image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+ }
+ 
+ @media (max-width: 768px) {
+  .search-bar input[type="text"] {
+     width: 80%; /* Réduit la largeur de la barre de recherche */
+  }
+ 
+  .search-bar button {
+     padding: 8px 16px; /* Réduit la taille du bouton */
+  }
+ }
+ 
+ @media (max-width: 480px) {
+  .search-bar input[type="text"] {
+     width: 90%; /* Réduit encore plus la largeur de la barre de recherche */
+  }
+ 
+  .search-bar button {
+     padding: 6px 12px; /* Réduit encore plus la taille du bouton */
+  }
+ }
+ 
+
+ @media (max-width: 480px) {
+  .search-bar input[type="text"] {
+     width: 90%; /* Réduit encore plus la largeur de la barre de recherche */
+  }
+ 
+  .search-bar button {
+     padding: 6px 12px; /* Réduit encore plus la taille du bouton */
+  }
+ }
+ 
+ @media (max-width: 768px) {
+  .product-container {
+     padding: 10px; /* Réduit le padding pour mieux s'adapter à l'espace */
+  }
+ 
+  #shop-box {
+     width: 90%; /* Réduit la largeur du box pour mieux s'adapter à l'espace */
+     margin: 0 auto; /* Centre le box horizontalement */
+  }
+ }
+ 
+ @media (max-width: 480px) {
+  .product-container {
+     padding: 5px; /* Réduit encore plus le padding */
+  }
+ 
+  #shop-box {
+     width: 95%; /* Réduit encore plus la largeur du box */
+     margin: 0 auto; /* Centre le box horizontalement */
+  }
+ }
+ 
+
+ @media (max-width: 768px) {
+  .product-card img {
+     width: 100%; /* Assure que les images s'adaptent à la largeur de la carte */
+  }
+ 
+  .product-card figcaption {
+     font-size: 0.9em; /* Réduit la taille du texte */
+  }
+ }
+ 
+ @media (max-width: 480px) {
+  .product-card img {
+     width: 100%; /* Assure que les images s'adaptent à la largeur de la carte */
+  }
+ 
+  .product-card figcaption {
+     font-size: 0.8em; /* Réduit encore plus la taille du texte */
+  }
+ }
+
+ .btn{
+  background: #f49d4b;
+  width: 58px;
+  height: 28px;
+  border: none;
+  border-radius: 5px;
+ }
+ 
