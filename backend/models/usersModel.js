@@ -58,10 +58,9 @@ exports.queryUpdateUser = (connexion, req, res) => {
 }
 
 exports.queryRemoveUser = (connexion, req, res) => {
-    const userId = req.params.id;
 
     const sql = "CALL removeUser(?)";
-    const values = [userId];
+    const values = req.body.id;
 
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
@@ -81,7 +80,7 @@ exports.queryLoginUser = async (connexion, req, res) => {
     connexion.query(sql, values, (err, row, fields) => {
         if (err) throw err;
         if (row.length === 0) {
-            return res.status(500).json({ message: "Username or password incorrect !" });
+            return res.status(500).json({ message: "Email or password incorrect !" });
         } else {
 
             const user = row[0];
@@ -89,7 +88,7 @@ exports.queryLoginUser = async (connexion, req, res) => {
             bcrypt.compare(password, user.Password)
             .then( valid => {
                 if(!valid){
-                    return res.status(401).json({ err: "Incorrect password or email !"});
+                    return res.status(401).json({ err: "Email or password incorrect !"});
                 } else {
                     res.status(200).json({
                         user_id: user.id,
@@ -101,6 +100,19 @@ exports.queryLoginUser = async (connexion, req, res) => {
                     });
                 }
             })
+            .catch( (error) => { error });
         }
+    });
+}
+
+exports.queryPromote = (connexion, req, res) => {
+    
+    const sql = "CALL promoteUser(?)";
+    const values = req.body.id;
+
+    connexion.query(sql, values, (err, row, fields) => {
+        if (err) throw err;
+        console.log(row);
+        res.json({ message: row });
     });
 }

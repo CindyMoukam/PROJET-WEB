@@ -3,11 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./index.css">
         <script type="module" src="./index.js"></script>
-        <title>DashBoard Products</title>
+        <title>Dashboard Users</title>
     </head>
     <body class="body">
-        DashBoard
+
+        <div class="body_div1">
+            <div class="body_div1_div1">
+                <a href=""><p>Profile</p></a>
+            </div>
+            <div class="body_div1_div2">
+                <a href=""><p>Users</p></a>
+            </div>
+            <div class="body_div1_div3">
+                <a href=""><p>Products</p></a>
+            </div>
+        </div>
+       
+        <div class="body_container">
+
+            <div class="body_div2">
+                <div class="body_div2_div1">
+                    <p class="body_div2_div1--p">ALL OF THE PRODUCT</p>
+                    <div class="body_div2_div1_div">
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="body_div3">
+                
+                <form enctype="multipart/form-data" method="post" name="form">
+
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="description">description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <label for="category">Category</label>
+                        <input type="text" name="category" id="category">
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="text" name="price" id="price">
+                    </div>
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="text" name="quantity" id="quantity">
+                    </div>
+                    <div>
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="image">
+                    </div>
+
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+            
+            </div>
+
+        </div>
+
     </body>
 </html>
