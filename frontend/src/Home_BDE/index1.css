@@ -13,6 +13,8 @@
   @media screen and (max-width: 500px) {
     .body {
       grid-template-rows: 0.05fr 0.95fr;
+      display: flex;
+      flex-direction: column;
     }
   }
   .body_div1 {
@@ -144,8 +146,7 @@
   }
   .body_div2 {
     height: 100vh;
-    overflow: auto;
-    scrollbar-width: none;
+   
   }
  
   *{
@@ -177,11 +178,12 @@ body{
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    box-shadow: 0 30px 50px #bcb4b4;
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
+    
 }
 
 .slide .item:nth-child(1),

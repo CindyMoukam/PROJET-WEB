@@ -13,6 +13,8 @@
 @media screen and (max-width: 500px) {
   .body {
     grid-template-rows: 0.05fr 0.95fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 .body_div1 {
@@ -144,8 +146,7 @@
 }
 .body_div2 {
   height: 100vh;
-  overflow: auto;
-  scrollbar-width: none;
+ 
 }
 .container {
   display: flex;
