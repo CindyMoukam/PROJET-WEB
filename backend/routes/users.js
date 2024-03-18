@@ -4,7 +4,6 @@ const auth = require('../middleware/auth');
 
 const usersCtrl = require('../controllers/users');
 
-
 // To collect all of the users in the db
 router.get('/collect', usersCtrl.getAllUsers);
 // To collect one users in the db

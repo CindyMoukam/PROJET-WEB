@@ -25,6 +25,7 @@ exports.queryOneUser = (connexion, req, res) => {
 
 exports.queryPostUser = async (connexion, req, res) => {
 
+    console.log(req.body);
     const { name, surname, location, email, password} = req.body;
     
     // bcrypt for encode the user password
@@ -37,11 +38,11 @@ exports.queryPostUser = async (connexion, req, res) => {
         connexion.query(sql, values, (err, row, fields) => {
             if (err) throw err;
             console.log(row);
-            res.json({ message: row });
+            res.status(201).json({ message: row });
         });
 
     })
-    .catch(err => res.status(500).json({ err }));
+    .catch(err => res.status(500).json({ error: err }));
 }
 
 exports.queryUpdateUser = (connexion, req, res) => {
