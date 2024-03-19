@@ -13,14 +13,17 @@ const likeRoutes = require('./routes/like');
 const categoryRoutes = require('./routes/category');
 const commentRoutes = require('./routes/comment');
 const messageRoutes = require('./routes/message');
+const notificationRoutes = require('./routes/notification');
 
 app.use(express.json());
 app.use(cors());
 
 // The route of the API
-app.use(express.static(__dirname + "images"));
+app.use(express.static('public'));
+app.use('/images', express.static('images'));
+
 app.use("/users", userRoutes);
-app.use("/product", productRoutes);
+app.use("/products", productRoutes);
 app.use("/idea", ideaRoutes);
 app.use("/image", imageRoutes);
 app.use("/event", EventRoutes);
@@ -28,6 +31,7 @@ app.use("/like", likeRoutes);
 app.use("/message", messageRoutes);
 app.use("/comment", commentRoutes);
 app.use("/category", categoryRoutes);
+app.use("/notification", notificationRoutes);
 
 
 

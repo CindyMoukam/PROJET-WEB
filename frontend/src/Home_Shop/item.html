@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="item.css">
         <script type="module" src="item.js"></script>
-        <script src="item1.js"></script>
+        <script src="item.js" type="module"></script>
         <title>Item_View_BDE</title>
+
     </head>
     <body class="body">
         
@@ -47,7 +48,7 @@
                 <!-- For the elements on the bottom of the navbar -->
                 <div class="body_div1_div1_box2">
                     
-                    <a href=""><img src="https://img.icons8.com/?size=24&id=83179&format=png" alt="Logout"></a>
+                    <img id="logout"  src="https://img.icons8.com/?size=24&id=83179&format=png" alt="Logout">
                 </div>
             </div>
 
@@ -57,46 +58,33 @@
             <div class="body_div2">
 
                
-                
+              
                 <div class="content-container">
                  
-                    <button id="bouton" onclick="goToPage()"><img src="https://img.icons8.com/?size=24&id=84994&format=png">Back</button><br>
+                    <button id="bouton" onclick="goToPage()"><img src="https://img.icons8.com/?size=24&id=84994&format=png" alt="img">Back</button><br>
                  
                      <script>
                        function goToPage() {
-                       window.location.href = 'http://localhost/Projet/PROJET-WEB/frontend/src/HOME/home.html?page=shop';
+                       window.location.href = 'http://localhost/Projetweb/PROJET-WEB/frontend/src/Home_Shop/home.html?page=shop';
                        }
                      </script><br>
                       <div class="product-card">
                         <a href="item.html?id=1">
-                          <img src="https://th.bing.com/th/id/OIP.q2cLaTB7ppQJsdw4MwEs1gHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
+                          <img src="Images Shop et Items\face.jpeg" alt="img">
                         </a>
                       </div>
                       <div class="product-card">
                         <a href="item.html?id=2">
-                          <img src="https://th.bing.com/th/id/OIP.Kri4nzMG5NXi3ZZaBsUSBwHaEK?w=100&h=67&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
+                          <img src="Images Shop et Items\dos.jpeg" alt="img">
                         </a>
                       </div>
                       <div class="product-card">
                         <a href="item.html?id=3">
-                          <img src="https://th.bing.com/th/id/OIP.2MRUljtDbK0bHorVbT_r6wHaER?w=100&h=58&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
+                          <img src="Images Shop et Items\côté.jpeg" alt="img">
                         </a>
                       </div>
-                      <div class="product-card">
-                        <a href="item.html?id=4">
-                          <img src="https://th.bing.com/th/id/OIP.LgxRM-P4t3MDUItJgXxSpwHaE7?w=100&h=67&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        </a>
-                      </div>
-                      <div class="product-card">
-                        <a href="item.html?id=5">
-                          <img src="https://th.bing.com/th/id/OIP.62CPQh_Lhx7qme3IGZK8PwHaDt?w=100&h=56&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        </a>
-                      </div>
-                      <div class="product-card">
-                        <a href="item.html?id=6">
-                          <img src="https://th.bing.com/th/id/OIP.yKvOx7tSBxexmXUFkK4lLwHaEK?w=308&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        </a>
-                      </div>
+                      
+                      
                 
                 </div>
 
@@ -104,49 +92,52 @@
 
               
                 
-            <div class="wrapper">
+             <div class="wrapper">
                     <div class="product-image-container">
-                        <img id="product-image" src="" alt="Produit">
+                        <img src="" id="product-image" alt="Produit">
                     </div>       
-                <div class="product-image-container">
-                    <h2 id="product-name"></h2>
-                    <p id="product-price"></p>
-                    <div id="product-rating"></div>
-                    <div id="product-description" class="product-description"></div>
                     <div class="product-buttons">
                       <button class="buy-button"><span class="icon">&#128722;Buy</span></button><br>
                       <button id="add-to-bag-button" class="add-to-bag-button"><span class="icon">&#128717;Add to Bag</span></button>
                     </div>
-                </div>
-                   
+                  <div class="product-image-container">
+                    <h2 id="product-name"></h2>
+                    <p id="product-price"></p>
+                    
+                  </div>
+
+              </div>
+           
+            
+            <h1 id="product-name">BURGER</h1>
+            <h4 id="product-price">Prix :5.000FCFA</h4>
+            <h3 id="item-description">Item Description</h3>
+            <p id="product-description">It is a popular food item that consists of a savory patty made from ground meat (such as beef, chicken, or turkey) that is typically cooked by grilling or frying. The patty is usually placed between two halves of a sliced bun, which serves as the base of the burger.</p>
 
             </div>
             
                 <div id="shop-box">
-                    <p>Bag</p>
+                  
                     <!-- Contenu du box -->
                     <div class="image">
-                        <img src="https://th.bing.com/th/id/OIP.yKvOx7tSBxexmXUFkK4lLwHaEK?w=308&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        <img src="https://th.bing.com/th/id/OIP.62CPQh_Lhx7qme3IGZK8PwHaDt?w=316&h=175&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        <img src="https://th.bing.com/th/id/OIP.LgxRM-P4t3MDUItJgXxSpwHaE7?w=244&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        <img src="https://th.bing.com/th/id/OIP.q2cLaTB7ppQJsdw4MwEs1gHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        <img src="https://th.bing.com/th/id/OIP.Kri4nzMG5NXi3ZZaBsUSBwHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
-                        <img src="https://th.bing.com/th/id/OIP.2MRUljtDbK0bHorVbT_r6wHaER?w=311&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lorem">
+                        <img src="Images Shop et Items\face.jpeg" alt="Lorem">
+                        <img src="Images Shop et Items\dos.jpeg" alt="Lorem">
+                        <img src="Images Shop et Items\côté.jpeg" alt="Lorem">
+                        
+                      
                     </div>
                       <div>
-                        button
+                        View All
                       </div>
                 </div>   
 
                 <script>
                     // Supposons que vous ayez un tableau de produits
                     const products = [
-                        { id: 1, name: 'Lorem', description: 'Item Description', price: 100, rating: 4, image: 'https://th.bing.com/th/id/OIP.q2cLaTB7ppQJsdw4MwEs1gHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
-                        { id: 2, name: 'Lorem', description: 'Item Description', price: 200, rating: 3, image: 'https://th.bing.com/th/id/OIP.Kri4nzMG5NXi3ZZaBsUSBwHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
-                        { id: 3, name: 'Lorem', description: 'Item Description', price: 100, rating: 5, image: 'https://th.bing.com/th/id/OIP.2MRUljtDbK0bHorVbT_r6wHaER?w=311&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
-                        { id: 4, name: 'Lorem', description: 'Item Description', price: 200, rating: 2, image: 'https://th.bing.com/th/id/OIP.LgxRM-P4t3MDUItJgXxSpwHaE7?w=244&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
-                        { id: 5, name: 'Lorem', description: 'Item Description', price: 100, rating: 4, image: 'https://th.bing.com/th/id/OIP.62CPQh_Lhx7qme3IGZK8PwHaDt?w=316&h=175&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
-                        { id: 6, name: 'Lorem', description: 'Item Description', price: 200, rating: 5, image: 'https://th.bing.com/th/id/OIP.yKvOx7tSBxexmXUFkK4lLwHaEK?w=308&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7' },
+                        { id: 1, name: 'External Hard Drive', description: 'The external hard drive consists of an enclosure that houses the internal hard drive, as well as a connection interface (usually USB) to connect to the computer. It can be powered by the computer itself through the USB cable or, in some cases, require an external power source. ', price: 50000, image: 'Images Shop et Items/face.jpeg'},
+                        { id: 2, name: 'Apple Watch', description: 'The watch features a touchscreen display and a digital crown that can be used for navigation and interacting with the device. It includes various sensors, such as a heart rate monitor, accelerometer, and gyroscope, which enable fitness tracking and health monitoring features.', price: 100000, image: 'Images Shop et Items/dos.jpeg' },
+                        { id: 3, name: 'Apple Watch', description: 'The AirPods Pro Max feature a sleek and modern design with a comfortable, padded headband and ear cups. The headband is adjustable to provide a customized fit for each user. The ear cups are made with breathable material to enhance comfort during extended periods of wear.', price:30000, image: 'Images Shop et Items/côté.jpeg' },
+                        
                         // Ajoutez d'autres produits ici
                     ];
             
@@ -158,27 +149,26 @@
                     const product = products.find(p => p.id === Number(productId));
             
                     if (product) {
-                        // Mettre à jour le DOM pour afficher les détails du produit
-                        document.getElementById('product-name').textContent = product.name;
-                        document.getElementById('product-price').textContent = 'Prix : ' + product.price;
+                        
+                        
                         // Mettre à jour l'URL de l'image du produit
                         document.getElementById('product-image').src = product.image;
+                        
             
-                        // Calculer le nombre d'étoiles
-                        const ratingStars = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
+                       
             
-                        // Mettre à jour l'élément product-rating avecla notation en étoiles
-                        document.getElementById('product-rating').textContent = 'Notation : ' + ratingStars;
+              
             
                         // Mettre à jour la description du produit
-                        document.getElementById('product-description').textContent = product.description;
+                        document.querySelector('.product-description').innerHTML = "<h2>Item Description</h2>" +  product.description;
+                        console.log(product.description);
                     } else {
                         // Gérer le cas où le produit n'est pas trouvé
                         event.preventDefault()
                         document.getElementById('product-name').textContent = 'Item Not Found';
                         document.getElementById('product-price').textContent = '';
-                        document.getElementById('product-rating').textContent = '';
-                        document.getElementById('product-description').textContent = '';
+                  
+                        //document.getElementById('product-description').textContent = '';
                     
                     }
                      

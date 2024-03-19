@@ -7,7 +7,8 @@ exports.queryAllProducts = (connexion, req, res) => {
 }
 
 exports.queryOneProduct = (connexion, req, res) => {
-    const productId = req.params.id;
+    
+    const productId = req.body
 
     const sql = "CALL getOneProduct(?)";
     const values = [productId];

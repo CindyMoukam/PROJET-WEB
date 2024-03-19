@@ -36,6 +36,7 @@ exports.queryPostUser = async (connexion, req, res) => {
         
         connexion.query(sql, values, (err, row, fields) => {
             if (err) throw err;
+            console.log(row);
             res.status(201).json({ message: row });
         });
 

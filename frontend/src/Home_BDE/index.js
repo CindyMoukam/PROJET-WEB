@@ -1,6 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
    
+    const logout = document.getElementById("logout");
+
+    logout.addEventListener("click", (e) => {
+        //e.preventDefault();
+        console.log("Is Ok !");
+        localStorage.removeItem("token");
+    })
+
     const homeIcon =  document.querySelector(".body_div1_div1_box1_div1");
     const shopIcon = document.querySelector(".body_div1_div1_box1_div2");
     const params = new URLSearchParams(window.location.search);

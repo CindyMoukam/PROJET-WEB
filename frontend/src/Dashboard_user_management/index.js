@@ -120,6 +120,8 @@ var data = async () => {
             })
         });
         
+        // Degrate th user
+
         
     })
     .catch(err => err);

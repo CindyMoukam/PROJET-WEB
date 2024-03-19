@@ -166,6 +166,8 @@
   }
 }
 
+
+
 .body_div2 {
   height: 100vh;
   overflow: auto;
@@ -218,6 +220,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 20px;
+  height: 95%;
 }
 
 .event {

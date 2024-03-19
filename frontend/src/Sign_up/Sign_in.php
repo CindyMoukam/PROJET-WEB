@@ -95,14 +95,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // The call of the API to register the informations of the user
         try {
             
-            fetch_data( url + "/login", "POST", {' .
+            fetch_data( "http://localhost:3000/users/login", "POST", {' .
                 'email:' . "\"" . $email . "\"" . ',' .
                 'password:' . "\"" . $password . "\"" .
             '})' . '.then( rep => {
                 console.log(rep);
-              )' . '
+                const token = rep.token;
+                localStorage.setItem("token", token);
+                window.location.href = "../Home_BDE/Home.html";
+              })' . '
             
-            window.location.href = "./Sign_in.html";
         } catch (error) {
             console.log("Error !");
         }

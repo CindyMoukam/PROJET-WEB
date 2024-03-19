@@ -35,7 +35,7 @@ var fetch_data = async (url, method, body) => {
 };
 
 // The url to acces at the server
-const url = "http://localhost:3000/product";
+const url = "http://localhost:3000/products";
 
 
 // The logic to manage the post of the new product
